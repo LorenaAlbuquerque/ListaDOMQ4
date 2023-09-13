@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name=“author” content=“Lorena Albuquerque”>
+  <meta name=“keywords” content=“bes017 - Web”>
+  <meta name="description" content="Atividades sobre JavaScript">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript</title>
+
+  <script>
+    function mostraDados() {
+      var peso = document.frm.peso.value;
+      var altura = document.frm.altura.value;
+
+      var imc = peso / (altura * altura);
+
+      if (imc >= 16 && imc <= 16.90) {
+        dados = " Muito abaixo do peso \nIMC=" + imc;
+        alert(dados);
+      } else if (imc >= 17 && imc <= 18.40) {
+        dados = " Abaixo do peso \nIMC=" + imc;
+        alert(dados);
+      } else if (imc >= 18.50 && imc <= 24.90) {
+        dados = " Peso normal \nIMC=" + imc;
+        alert(dados);
+      } else if (imc >= 25 && imc <= 29.90) {
+        dados = " Acima do peso \nIMC=" + imc;
+        alert(dados);
+      } else if (imc >= 30) {
+        dados = " Obesidade \nIMC=" + imc;
+        alert(dados);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <form name="frm">
+    Peso: <input type="number" name="peso"> </p>
+    Altura: <input type="text" name="altura"> </p>
+
+    <input type="submit" value="Enviar" onclick="mostraDados()">
+  </form>
+</body>
+
+</html>
